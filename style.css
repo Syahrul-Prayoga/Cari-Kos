@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  /* background-color: #093752; */
+  justify-content: space-around;
+  /* color: rgb(0, 139, 139); */
+  color: white;
+  height: 50px;
+  align-items: center;
+}
+
+nav .navbar-brand {
+  font-family: "Viga", sans-serif;
+  font-size: 1.2em;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  /* color: rgb(0, 139, 139); */
+  color: white;
+  text-decoration: none;
+}
+
+nav .nav-login {
+  color: black;
+}
+
+nav .nav-login:hover {
+  color: white;
+  background-color: black;
+}
+
+nav ul li a:hover {
+  cursor: pointer;
+  color: black;
+}
+
+/* Akhir Navbar */
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.7s;
+}
+
+/* Akhir Hamburger */
+
+/* hamburger animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* akhir hamburger animation */
+
+/* Jumbotron */
+.jumbotron {
+  display: flex;
+  /* position: relative; */
+  margin-top: -60px;
+  height: 600px;
+  background-image: url(./assets/img/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  z-index: -2;
+}
+
+.jumbotron .container {
+  margin-left: 30px;
+}
+
+.jumbotron h2 {
+  display: flex;
+  height: 250px;
+  width: 100%;
+  /* margin-left: 30px; */
+  font-weight: bolder;
+  font-size: 50px;
+  align-items: flex-end;
+  color: #fde780;
+}
+
+.jumbotron h4 {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  /* margin-left: 30px; */
+  font-weight: 500;
+  font-size: 25px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.jumbotron .daftar {
+  display: flex;
+  height: 30px;
+  width: 50%;
+  /* margin-left: 30px; */
+  font-weight: 300;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgb(0, 139, 139);
+  padding: 20px;
+}
+
+.jumbotron h6 {
+  margin-top: 10px;
+  margin-left: 28px;
+  display: flex;
+  color: white;
+}
+
+.jumbotron h6 span a {
+  margin-left: 5px;
+  text-decoration: none;
+  color: white;
+}
+
+.jumbotron a:hover {
+  cursor: pointer;
+  color: black;
+}
+
+/* Akhir Jumbotron */
+
+/* services */
+.services {
+  display: flex;
+  height: 400px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.services h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Akhir services */
+
+/* Footer */
+footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(29, 29, 29);
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+}
+
+/* Akhir Footer */
+
+/* Utilities */
+.button {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 30px;
+  opacity: 0.7;
+  padding: 5px 10px;
+}
+
+/* Akhir Utilities */
+
+/* responsive breakpoint */
+/*! tablet */
+@media screen and (max-width: 768px) {
+  /* Navbar */
+  nav ul {
+    width: 50%;
+  }
+
+  /* Akhir Navbar */
+
+  /* jumbotron */
+  .jumbotron h6 {
+    color: white;
+  }
+
+  .jumbotron h6 span a {
+    color: white;
+  }
+
+  .jumbotron h6 span a:hover {
+    color: black;
+  }
+  /* akhir jumbotron */
+}
+
+/*! mobile */
+@media screen and (max-width: 576px) {
+  /* Navbar */
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 50px;
+    height: 35%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: -1;
+    background-color: rgb(0, 139, 139);
+    transform: translateY(-100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul li a {
+    color: aqua;
+  }
+
+  nav ul li:hover {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    background-color: aqua;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul li a:hover {
+    color: black;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  /* Akhir Navbar */
+
+  /* jumbotron */
+  .jumbotron {
+    justify-content: center;
+  }
+
+  .jumbotron h2 {
+    margin-left: 0;
+  }
+
+  .jumbotron h4 {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .jumbotron a {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .jumbotron h6 {
+    color: black;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .jumbotron h6 span a {
+    color: black;
+  }
+
+  .jumbotron h6 span a:hover {
+    color: white;
+  }
+  /* Akhir jumbotron */
+}
