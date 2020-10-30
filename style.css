@@ -93,17 +93,17 @@ nav ul li a:hover {
   transform-origin: 0 100%;
 }
 
-.menu-toggle input:checked ~ span:nth-child(2) {
+.menu-toggle input:checked~span:nth-child(2) {
   background-color: white;
   transform: rotate(45deg) translate(-1px, -1px);
 }
 
-.menu-toggle input:checked ~ span:nth-child(4) {
+.menu-toggle input:checked~span:nth-child(4) {
   background-color: white;
   transform: rotate(-45deg) translate(-1px, 0px);
 }
 
-.menu-toggle input:checked ~ span:nth-child(3) {
+.menu-toggle input:checked~span:nth-child(3) {
   opacity: 0;
   transform: scale(0);
 }
@@ -115,7 +115,7 @@ nav ul li a:hover {
   display: flex;
   /* position: relative; */
   margin-top: -60px;
-  height: 600px;
+  height: 700px;
   background-image: url(./assets/img/bg.jpg);
   background-position: center;
   background-size: cover;
@@ -218,7 +218,7 @@ footer {
   border: 1px solid;
   border-radius: 30px;
   opacity: 0.7;
-  padding: 5px 10px;
+  padding: 4px 7px;
 }
 
 /* Akhir Utilities */
@@ -226,6 +226,7 @@ footer {
 /* responsive breakpoint */
 /*! tablet */
 @media screen and (max-width: 768px) {
+
   /* Navbar */
   nav ul {
     width: 50%;
@@ -245,11 +246,13 @@ footer {
   .jumbotron h6 span a:hover {
     color: black;
   }
+
   /* akhir jumbotron */
 }
 
 /*! mobile */
 @media screen and (max-width: 576px) {
+
   /* Navbar */
   .menu-toggle {
     display: flex;
@@ -326,5 +329,6 @@ footer {
   .jumbotron h6 span a:hover {
     color: white;
   }
+
   /* Akhir jumbotron */
 }

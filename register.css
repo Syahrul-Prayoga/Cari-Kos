@@ -7,7 +7,8 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(120deg, #2980b9, #8e44ad);
+  /* background: linear-gradient(120deg, #2980b9, #8e44ad); */
+  background-image: url(./assets/img/login-bg.jpg);
   overflow: hidden;
 }
 
@@ -19,6 +20,7 @@ body {
   width: 400px;
   background: white;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
 }
 
 .register h3 {
@@ -114,4 +116,28 @@ input[type="submit"]:hover {
 
 .login-link a:hover {
   text-decoration: underline;
+}
+
+.forgot-password-link {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* text-align: center; */
+  font-size: 16px;
+  color: #666666;
+}
+
+.forgot-password-link a {
+  color: #2691d9;
+  text-decoration: none;
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+/*! mobile */
+@media screen and (max-width: 576px) {
+  .register {
+    width: 300px;
+  }
 }
