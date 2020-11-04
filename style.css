@@ -11,12 +11,16 @@ body {
 /* Navbar */
 nav {
   display: flex;
-  /* background-color: #093752; */
+  position: sticky;
+  background-color: #093752;
   justify-content: space-around;
   /* color: rgb(0, 139, 139); */
   color: white;
   height: 50px;
   align-items: center;
+  /* padding: 20px; */
+  top: 0;
+  z-index: 2;
 }
 
 nav .navbar-brand {
@@ -114,7 +118,7 @@ nav ul li a:hover {
 .jumbotron {
   display: flex;
   /* position: relative; */
-  margin-top: -60px;
+  /* margin-top: -60px; */
   height: 700px;
   background-image: url(./assets/img/bg.jpg);
   background-position: center;
@@ -186,14 +190,21 @@ nav ul li a:hover {
 /* services */
 .services {
   display: flex;
-  height: 400px;
+  /* height: 400px; */
   margin-top: 30px;
+  margin-bottom: 30px;
   justify-content: center;
 }
 
-.services h3 {
+.services .title {
+  margin-bottom: 30px;
   font-size: 20px;
   font-weight: 500;
+  /* text-align: center; */
+}
+
+.services .maps {
+  margin-top: 50px;
 }
 
 /* Akhir services */
@@ -264,10 +275,10 @@ footer {
     height: 35%;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     flex-direction: column;
     z-index: -1;
-    background-color: rgb(0, 139, 139);
+    /* background-color: rgb(0, 139, 139); */
     transform: translateY(-100%);
     transition: all 1s;
     opacity: 0;
@@ -281,7 +292,7 @@ footer {
     display: flex;
     width: 100%;
     height: 20%;
-    background-color: aqua;
+    /* background-color: aqua; */
     justify-content: center;
     align-items: center;
   }
@@ -301,6 +312,12 @@ footer {
   .jumbotron {
     justify-content: center;
   }
+
+  .jumbotron .container {
+    margin-left: 0px;
+    text-align: center;
+  }
+
 
   .jumbotron h2 {
     margin-left: 0;
