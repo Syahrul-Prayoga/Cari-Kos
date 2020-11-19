@@ -13,6 +13,10 @@
           <?php if (session()->getFlashData('pesan')) : ?>
             <div class="alert alert-success" role="alert">
               <?= session()->getFlashData('pesan'); ?>
+
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
           <?php endif; ?>
           <form class="form-inline my-2 my-lg-0">
