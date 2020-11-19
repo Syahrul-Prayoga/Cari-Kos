@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./style/login.css">
-  <title>Login</title>
-</head>
-
-<body>
+<?= $this->extend('layout/template-login'); ?>
+<?= $this->section('content'); ?>
 
   <div class="register">
     <h3>Login</h3>
@@ -31,11 +22,10 @@
       <input type="submit" name="submit" id="" value="Login">
 
       <div class="login-link">
-        <h6> belum punya akun? <span><a href="login.html">Register</a></span></h6>
+        <h6> belum punya akun? <span><a href="register">Register</a></span></h6>
       </div>
     </form>
   </div>
   </div>
-</body>
 
-</html>
+<?= $this->endSection(); ?>
