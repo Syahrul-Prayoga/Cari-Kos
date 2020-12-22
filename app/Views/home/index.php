@@ -19,10 +19,10 @@
               </button>
             </div>
           <?php endif; ?>
-          <form class="form-inline my-2 my-lg-0">
+          <!-- <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Cari Kos" aria-label="Cari">
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">cari</button>
-          </form>
+          </form> -->
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <a href="/home/detail/<?= $l['id']; ?>">
             <div class="card">
-              <img src="<?= $l['img']; ?>" class="card-img-top" alt="">
+              <img src="/img/<?= $l['img']; ?>" class="card-img-top" alt="">
               <div class="card-body">
                 <p class="card-text"><?= $l['title']; ?></p>
               </div>
@@ -65,7 +65,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form action="/home/save" method="POST">
+          <form action="/home/save" method="POST" enctype="multipart/form-data">
             <div class="modal-body">
               <div class="form-group">
                 <label for="kosTitle">Nama Kos</label>
@@ -76,8 +76,22 @@
                 <input type="text" class="form-control" id="kosTelp" name="kosTelp" required>
               </div>
               <div class="form-group">
+                <label for="kosAlamat">Alamat</label>
+                <input type="text" class="form-control" id="kosAlamat" name="kosAlamat" required>
+              </div>
+              <!-- <div class="form-group">
                 <label for="kosImg">Link Foto</label>
                 <input type="text" class="form-control" id="kosImg" name="kosImg" required>
+              </div> -->
+              <div class="form-group row">
+                <label for="kosImg">Foto</label>
+                <div class="col-sm-2">
+                  <img src="/img/default.png" class="img-thumbnail img-preview">
+                </div>
+                <div class="custom-file col-sm-8">
+                  <input type="file" class="custom-file-input" id="kosImg" name="kosImg" onchange="previewImg()">
+                  <label class="custom-file-label" for="KosImg">Pilih Gambar..</label>
+                </div>
               </div>
             </div>
             <div class="modal-footer">

@@ -25,7 +25,7 @@
           <input type="file" class="form-control-file" id="kosImg" name="kosImg">
         </div> -->
 
-        <button type="submit" class="btn btn-dark">Tambah data</button>
+        <button type="submit" class="btn btn-dark">Tambah Kos</button>
       </form>
 
     </div>

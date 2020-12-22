@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class HomeModel extends Model
 {
   protected $table = 'list-kos';
-  protected $allowedFields = ['title', 'img', 'telp']; //fungsi untuk memperbolehkan field mana saja yang bisa diisi secara manual ke database
+  protected $allowedFields = ['title', 'img', 'telp', 'alamat']; //fungsi untuk memperbolehkan field mana saja yang bisa diisi secara manual ke database
 
   public function getKos($id = false)
   {
@@ -16,5 +16,10 @@ class HomeModel extends Model
     }
 
     return $this->where(['id' => $id])->first();
+  }
+
+  public function deleteKos($id)
+  {
+    return $this->delete($id);
   }
 }
